@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Star-Wars</title>
+</head>
+
+<body>
+    <!--Menu de navegacion-->
+    <header id="navBar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="IMG/Index/Logo_Star_Wars.jpg" class="d-inline-block align-center" alt="Logo"
+                    loading="lazy">
+                Star Wars Ind
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link texto-navbar" href="#productos">Tienda<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  texto-navbar" href="#juego">Juego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto-navbar" href="#footer">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Fin menu de navegacion-->
+    <!--Inicio carrusel-->
+    <div class="container" id="banner">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Imagen/Index/banner_Star_Wars.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Imagen/Index/banner_Star_Wars.jpg" class=" d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Imagen/Index/banner_Star_Wars.jpg" class=" d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!--Fin carrusel-->
+    <!--Cards productos-->
+    <main class="container" id="productos">
+        <div class="row" id="card-dinamica"></div>
+    </main>
+    <template id="template-card">
+        <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <img src="" alt="" class="card-img-top" id="imagen-producto">
+                    <h4 class="card-title text-primary lead" id="nombre-producto"></h4>
+                    <p class="lead text-secondary" id="precio-producto"></p>
+                    <button class="btn btn-primary" id="btn-agregar" data-id="">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!--Fin card productos-->
+    <!--Carrito de compras-->
+    <div class="carrito-compras container text-center" id="tienda">
+        <div id="carrito">
+            <table class="tabla" id="lista-productos-carrito">
+                <thead class="lista">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Agregar</th>
+                        <th scope="col">Quitar</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="productos-agregados"></tbody>
+                <tfoot>
+                    <tr id="datos-carrito">
+                        <th scope="row" colspan="5">No hay productos agregados</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <button id="carrito-de-compras" class="panel-btn"><img src="Imagen/Index/cart-plus-fill.svg" alt="carrito"></button>
+    <template id="template-carrito">
+        <tr>
+            <td id="nombre-producto-carrito">nombre</td>
+            <td><button class="btn btn-sm btn-info" id="agregar">+</button></td>
+            <td><button class="btn btn-sm btn-danger" id="quitar">-</button></td>
+            <td id="cantidad-producto-carrito">cantidad</td>
+            <td id="precio-producto-carrito">precio</td>
+        </tr>
+    </template>
+    <template id="template-datos-carrito">
+        <th scope="row" colspan="2">Total productos: <span id="total-productos"></span></th>
+        <th scope="row" colspan="2">Precio total: $ <span id="precio-total"></span></th>
+        <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+            Vaciar carrito
+        </button>
+        <button class="btn btn-info btn-sm" id="comprar">
+            Comprar
+            </td>
+    </template>
+    <!--Fin carrito de compras-->
+    <!--Inicio juegos-->
+    <div>
+        <h1 class="instrucciones">Instrucciones</h1>
+        <p class="instrucciones">
+            Para iniciar el juego debe dar click en el boton "Iniciar", esto hara que comience a disminuir el tiempo
+        </p>
+        <p class="instrucciones">por cada respuesta correcta obtengra 10 segundos extra</p>
+        <p class="instrucciones">por cada respuesa incorrecta se le decrementara 10
+            segundos.</p>
+        <p class="instrucciones">Si consigue 2 o menos respuestas correctas, habra perdido.</p>
+        <p class="instrucciones">Si consigue mas de 2 pero menos de 4 respuestas correctas, empatara el juego.</p>
+        <p class="instrucciones">Si consigue 5 o mas respuestas correctas, ganara.</p>
+        <p class="instrucciones">Una vez contestada las 6 preguntas, hacer click en el boton "Fin"</p>
+    </div>
+    <div id="juego">
+        <a href="#juego"></a>
+        <div id="temporizador">
+            <h2 id="contador">60</h2>
+            <button class="btn-juego" id="inicio-juego">Iniciar</button>
+        </div>
+        <div id="preguntas">
+            <div id="preguntaUno">
+                <p class="pregunta">
+                    ¿Quien fue el maestro de Anakin Skywalker?
+                </p>
+                <div class="respuesta_preg">
+                    <button class="btn-respuestas custom-btn respuestaUno respuesta_1 respuestasUnoIncorrectas">Ahsoka
+                        Tano</button>
+                    <button class="btn-respuestas custom-btn respuestaUno respuesta_2 respuestasUnoIncorrectas">Maestro
+                        Joda</button>
+                    <button class="btn-respuestas custom-btn respuestaUno respuesta_3" id="respuestaCorrectaUno">Obiwan
+                        Kenovi</button>
+                    <button class="btn-respuestas custom-btn respuestaUno respuesta_4 respuestasUnoIncorrectas">Condee
+                        Dooku</button>
+                </div>
+            </div>
+            <div id="preguntaDos">
+                <p class="pregunta">
+                    ¿Quien fue el droide de Anakin Skywalker?
+                </p>
+                <div class="respuesta_preg">
+                    <button class="btn-respuestas custom-btn respuestaDos respuesta_1"
+                        id="respuestaCorrectaDos">R2D2</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaDos respuesta_2 respuestasDosIncorrectas">BB-8</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaDos respuesta_3 respuestasDosIncorrectas">C-3PO</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaDos respuesta_4 respuestasDosIncorrectas">Otro</button>
+                </div>
+            </div>
+            <div id="preguntaTres">
+                <p class="pregunta">
+                    ¿Quien destruyo la estrella de la muerte?
+                </p>
+                <div class="respuesta_preg">
+                    <button class="btn-respuestas custom-btn respuestaTres respuesta_1 respuestasTresIncorrectas">Han
+                        Salo</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaTres respuesta_2 respuestasTresIncorrectas">Pincesa
+                        Leia</button>
+                    <button class="btn-respuestas custom-btn respuestaTres respuesta_3 respuestasTresIncorrectas">Darth
+                        Vader</button>
+                    <button class="btn-respuestas custom-btn respuestaTres respuesta_4" id="respuestaCorrectaTres">Luke
+                        Skywalker</button>
+                </div>
+            </div>
+            <div id="preguntaCuatro">
+                <p class="pregunta">
+                    ¿Quién adoptó a la hija de Padmé Amidala?
+                </p>
+                <div class="respuesta_preg">
+                    <button
+                        class="btn-respuestas custom-btn respuestaCuatro respuesta_1 respuestasCuatroIncorrectas">Capitán
+                        Antilles</button>
+                    <button class="btn-respuestas custom-btn respuestaCuatro respuesta_2"
+                        id="respuestaCorrectaCuatro">Bail
+                        Organa</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaCuatro respuesta_3 respuestasCuatroIncorrectas">Beru
+                        Lars</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaCuatro respuesta_4 respuestasCuatroIncorrectas">Gidean
+                        Danu</button>
+                </div>
+            </div>
+            <div id="preguntaCinco">
+                <p class="pregunta">
+                    ¿Que Lord Sith que sostiene un sable de luz de doble hoja?
+                </p>
+                <div class="respuesta_preg">
+                    <button
+                        class="btn-respuestas custom-btn respuestaCinco respuesta_1 respuestasCincoIncorrectas">Darth
+                        Vader</button>
+                    <button class="btn-respuestas custom-btn respuestaCinco respuesta_2"
+                        id="respuestaCorrectaCinco">Darth
+                        Mutilar</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaCinco respuesta_3 respuestasCincoIncorrectas">Darth
+                        pablo</button>
+                    <button
+                        class="btn-respuestas custom-btn respuestaCinco respuesta_4 respuestasCincoIncorrectas">Darth
+                        Garth</button>
+                </div>
+            </div>
+            <div id="preguntaSeis">
+                <p class="pregunta">
+                    ¿Cuál es el arma preferida de Chewbacca?
+                </p>
+                <div class="respuesta_preg">
+                    <button class="btn-respuestas custom-btn respuestaSeis respuesta_1 respuestasSeisIncorrectas">Rifle
+                        bláster</button>
+                    <button class="btn-respuestas custom-btn respuestaSeis respuesta_2 respuestasSeisIncorrectas">Sable
+                        de
+                        luz</button>
+                    <button class="btn-respuestas custom-btn respuestaSeis respuesta_3"
+                        id="respuestaCorrectaSeis">Bowcaster</button>
+                    <button class="btn-respuestas custom-btn respuestaSeis respuesta_4 respuestasSeisIncorrectas">Club
+                        de
+                        metal</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn-juego" id="fin-juego">Fin</button>
+    </div>
+    <!--Inicio seccion Nosotros-->
+    <!--Fin secicon Nosotros-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-4 col-xl-4 col-md-6 col-sm-12 footerMap">
+                    <div class="footer__contenido-maps">
+                        <iframe class="footerContenido__maps-mapa"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.1760939343035!2d-58.56311968423814!3d-34.54909656211814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba020824f885%3A0xe9c1282df0b7c425!2sProf%20F.%20Ag%C3%BCer%205138%2C%20B1653LYJ%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1626101986211!5m2!1ses-419!2sar"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="footerContacto col-xl-4 col-md-6 col-sm-12">
+                    <p>Contacto</p>
+                    <p>
+                        <strong>Direccion:</strong> Profesor Aguer 5453, Villa Ballester, Partido de San Martin, Buenos
+                        Aires.
+                    </p>
+                    <p>
+                        <strong>Telefono:</strong> +54 11 3308 6330
+                    </p>
+                    <p>
+                        <strong>E-mail:</strong> lucasezequiel9720@hotmail.com
+                    </p>
+                </div>
+                <div class="footerFormulario col-xl-4 col-md-12 col-sm-12">
+                    <div class="container">
+                        <form id="formulario">
+                            <input class="form-control mb-2" name="userName" placeholder="Ingrese su nombre"
+                                autocomplete="off" id="usuarioNombre" type="text" />
+                            <p class="text-danger mb-2 d-none" id="alertaNombre"></p>
+                            <input id="usuarioNumero" type="number"
+                                class="form-control contacto__formulario-telefono form-control mb-2"
+                                placeholder="numero telefonico">
+                            <input class="form-control mb-2" name="userEmail" placeholder="Ingrese su correo"
+                                id="usuarioEmail" autocomplete="off" type="email" />
+                            <p class="text-danger mb-2 d-none" id="alertaEmail"></p>
+                            <textarea class="form-control contacto__formulario-mensaje" cols="25" rows="10" id="mensaje"
+                                placeholder="Mensaje (Opcional)"></textarea>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                            <button type="reset" class="btn btn-primary">Borrar</button>
+                        </form>
+                        <div class="alert alert-success mt-2 d-none" id="alertSuccess"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="JS/main.js"></script>
+    <script src="JS/juego.js"></script>
+    <script src="JS/formulario.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</body>
+
+</html>

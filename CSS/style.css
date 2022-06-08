@@ -1,0 +1,320 @@
+*{
+  margin: 0px;
+  padding:0 px;
+}
+body{
+    background-image: url(https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg)
+}
+.navbar{
+  background-color: #002244;
+  height: 95px;
+  width: 100%;
+}
+.logo{
+    border-radius: 80%;
+    max-height: 55px;
+}
+
+/*Carrito de compras*/
+.carrito-compras{
+    position: fixed;
+    z-index: 998;
+    background-color: rgba(34,34,34,0.85);
+    width: 100%;
+    height : 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translate(-10000%, 0);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrito-compras.is-active{
+    transform: translate(0,0);
+}
+#carrito{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    right:715px;
+    left:715px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.lista tr th{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Fin carrito Compras*/
+#banner{
+    margin-bottom: 30px;
+}
+#juego-preguntas{
+    margin-top:  30px;
+}
+#footer{
+    margin-top: 30px;
+}
+#mensaje{
+    max-height: 100px;
+}
+#nombre-formulario{
+    margin: 0px;
+    padding-left: 0px ;
+}
+#apellido-formulario{
+    margin: 0px;
+    padding-right: 0px;
+    
+}
+footer{
+    background-color: black;
+}
+
+header{
+    background-color: gray;
+}
+.row{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card{
+    margin: 10px;
+}
+#nombre-producto{
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+}
+.footerMap{
+    margin-top: 30px;
+}
+.footerFormulario{
+    margin-top: 15px;
+}
+.footerContacto{
+    margin-top: 15px;
+}
+#productos-agregados tr td {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#datos-carrito th{
+    margin: auto
+}
+
+/*Juego*/
+
+#juego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#preguntas {
+    display: grid;
+    grid-template-areas:
+      "preg_1 . preg_2"
+      "preg_3 . preg_4"
+      "preg_5 . preg_6";
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    width: 1200px;
+    height: auto;
+}
+#preguntaUno {
+    grid-area: preg_1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    background: rgb(13,12,12);
+background: linear-gradient(90deg, rgba(241,237,237,1) 30%, rgba(167,168,180,1) 48%, rgba(22,20,40,1) 97%);
+    margin: 6px;
+    padding: 5px;
+  }
+  #preguntaDos {
+    grid-area: preg_2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    background: rgb(22,20,40);
+    background: linear-gradient(90deg, rgba(22,20,40,1) 30%, rgba(167,168,180,1) 48%, rgba(241,237,237,1) 97%);
+    margin: 6px;
+    padding: 5px;
+  }
+  #preguntaTres {
+    grid-area: preg_3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    background: rgb(13,12,12);
+background: linear-gradient(90deg, rgba(241,237,237,1) 30%, rgba(167,168,180,1) 48%, rgba(22,20,40,1) 97%);
+    margin: 6px;
+    padding: 5px;
+  }
+  #preguntaCuatro {
+    grid-area: preg_4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    background: rgb(22,20,40);
+    background: linear-gradient(90deg, rgba(22,20,40,1) 30%, rgba(167,168,180,1) 48%, rgba(241,237,237,1) 97%);
+    margin: 6px;
+    padding: 5px;
+  }
+  #preguntaCinco {
+    grid-area: preg_5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    background: rgb(13,12,12);
+background: linear-gradient(90deg, rgba(241,237,237,1) 30%, rgba(167,168,180,1) 48%, rgba(22,20,40,1) 97%);
+    margin: 6px;
+    padding: 5px;
+  }
+  #preguntaSeis {
+    grid-area: preg_6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    background: rgb(22,20,40);
+    background: linear-gradient(90deg, rgba(22,20,40,1) 30%, rgba(167,168,180,1) 48%, rgba(241,237,237,1) 97%);
+    margin: 6px;
+    padding: 5px;
+  }
+
+.respuesta_preg {
+    display: grid;
+    grid-template-areas:
+      "res_1  res_2"
+      "res_3  res_4";
+    grid-template-columns: 2fr  2fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .respuesta_1 {
+    grid-area: res_1;
+    border: solid 1px rgba(14, 6, 26, 0.323);
+    padding: 2px;
+
+    margin: 8px;
+    height: auto;
+  }
+  .respuesta_2 {
+    grid-area: res_2;
+    border: solid 1px rgba(14, 6, 26, 0.323);
+    padding: 2px;
+
+    margin: 8px;
+    height: auto;
+  }
+  .respuesta_3 {
+    grid-area: res_3;
+    border: solid 1px rgba(14, 6, 26, 0.323);
+    padding: 2px;
+
+    margin: 8px;
+    height: auto;
+  }
+  .respuesta_4 {
+    grid-area: res_4;
+    border: solid 1px rgba(14, 6, 26, 0.323);
+    padding: 2px;
+
+    margin: 8px;
+    height: auto;
+  }
+
+  .custom-btn {
+    width: 100px;
+    height: 20px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+  .btn-respuestas {
+    background: rgb(130,126,126);
+    background: linear-gradient(0deg, rgb(10, 8, 8) 0%, rgb(6, 5, 5) 100%);
+    border: none;
+    width: 180px;
+    height: 40px;
+    
+  }
+  .btn-respuestas:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-respuestas:hover {
+    box-shadow:  4px 4px 6px 0 rgba(247, 243, 243, 0.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(210, 210, 210, 0.4);
+  }
+  .pregunta{
+      font-size: 15px;
+      color: black;
+      margin-top: 0px;
+      margin-bottom: 0px;
+  }
+
+  .instrucciones{
+      margin-left: 50px;
+      margin-right: 50px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+  }
+  #contador{
+      color: white;
+  }
+.nombre-apellido{
+  width: 100%;
+}

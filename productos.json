@@ -1,0 +1,58 @@
+[ 
+    {
+        "id": "0",
+        "nombre": "Remera Darth Vader",
+        "precio": 1500,
+        "imagen": "IMG/Ropa/Remera_Darth_Vader.png",
+        "alt": "remera Darth Vader"
+    },
+    {
+        "id": "1",
+        "nombre": "Campera Stormtrooper",
+        "precio": 4200, 
+        "imagen": "IMG/Ropa/campera_Stormtrooper.png",
+        "alt": "Campera StormTrooper"
+    },
+    {
+        "id": "2",
+        "nombre": "Remera The Mandalorian",
+        "precio": 1500,
+        "imagen": "IMG/Ropa/Remera_Mandalorian.png",
+        "alt": "remera The Mantalorian"
+    },
+    {
+        "id": "3",
+        "nombre": "Remera TIE",
+        "precio": 1100,
+        "imagen": "IMG/Ropa/Remera_TIE-Fighter.png",
+        "alt": "remera TIE Fighter"
+    },
+    {
+        "id": "4",
+        "nombre": "Ahsoka Tano",
+        "precio": 2500,
+        "imagen": "IMG/Juguetes/Ahsoka Tano (Mandalorian)/Ahsoka_Tano_Mandalorian_pose2.png",
+        "alt": "Ahsoka Tano coleccionable"
+    },
+    {
+        "id": "5",
+        "nombre": "The Mandalorian Beskar",
+        "precio": 2700,
+        "imagen": "IMG/Juguetes/The Mandalorian Beskar/The_Mandalorian_Beskar_pose1.png",
+        "alt": "The Mandalorian coleccionable"
+    },
+    {
+        "id": "6",
+        "nombre": "Conde Dooku",
+        "precio": 1800,
+        "imagen": "IMG/Juguetes/Conde Dooku/Dooku_pose1.png",
+        "alt": "Conde Dooku coleccionable"
+    },
+    {
+        "id": "7",
+        "nombre": "General Grivious",
+        "precio": 2000,
+        "imagen": "IMG/Juguetes/General Grivious/General_Grievous_pose2.png",
+        "alt": "General Grivous coleccionable"
+    }
+]
